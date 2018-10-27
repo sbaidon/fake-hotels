@@ -41,7 +41,9 @@ function generateHotels(n) {
               faker.random.arrayElement(['free_parking', 'free_wifi', 'pets']), 
               faker.random.arrayElement(['restaurant', 'gym', 'pool', 'spa']), 
             ],
-            images: Array.from({ length: faker.random.number({ min: 1, max: 5 }) }, () => faker.image.imageUrl()),
+            images: [
+              faker.random.arrayElement(['/one.jpg', '/two.jpg', '/three.jpg', '/four.jpg', '/five.jpg', '/six.jpg']), 
+            ],
             rooms: generateRooms(faker.random.number({ min: 2, max: 6 })),
         }
     })
